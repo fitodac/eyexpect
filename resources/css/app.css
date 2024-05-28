@@ -1,0 +1,143 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+@font-face {
+	font-family: "Barlow Condensed";
+	src:  url("../fonts/BarlowCondensed-Light.woff2") format("woff2"),
+	url("../fonts/BarlowCondensed-Light.woff") format("woff"),
+	url("../fonts/BarlowCondensed-Light.otf") format("opentype");
+	font-style: normal;
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: "Barlow Condensed";
+	src:  url("../fonts/BarlowCondensed-Regular.woff2") format("woff2"),
+	url("../fonts/BarlowCondensed-Regular.woff") format("woff"),
+	url("../fonts/BarlowCondensed-Regular.otf") format("opentype");
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Barlow Condensed";
+	src:  url("../fonts/BarlowCondensed-Italic.woff2") format("woff2"),
+	url("../fonts/BarlowCondensed-Italic.woff") format("woff"),
+	url("../fonts/BarlowCondensed-Italic.otf") format("opentype");
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Barlow Condensed";
+	src:  url("../fonts/BarlowCondensed-Bold.woff2") format("woff2"),
+	url("../fonts/BarlowCondensed-Bold.woff") format("woff"),
+	url("../fonts/BarlowCondensed-Bold.otf") format("opentype");
+	font-style: normal;
+	font-weight: 600;
+}
+
+
+
+
+
+.z-15{ z-index: 15; }
+.z-14{ z-index: 14; }
+.z-13{ z-index: 13; }
+.z-12{ z-index: 12; }
+.z-11{ z-index: 11; }
+.z-10{ z-index: 10; }
+.z-9{ z-index: 9; }
+.z-8{ z-index: 8; }
+.z-7{ z-index: 7; }
+.z-6{ z-index: 6; }
+.z-5{ z-index: 5; }
+.z-4{ z-index: 4; }
+.z-3{ z-index: 3; }
+.z-2{ z-index: 2; }
+.z-1{ z-index: 1; }
+
+
+
+
+#homePage{
+	background: #fff url('../img/bg-main.jpg') no-repeat center right / cover;
+}
+
+@media (min-width: 640px){
+	#homePage{
+		background-size: cover;
+		background-position: -18vw 0;
+	}
+}
+
+@media (min-width: 768px){
+	#homePage{
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+
+
+/**
+About page
+ */
+.page-about{
+	background: #fff url('../img/bg-about.jpg') no-repeat bottom right / 100% auto;
+}
+
+@media (min-width: 768px){
+	.page-about{ background-size: 70% auto; }
+}
+
+@media (min-width: 1024px){
+	.page-about{ background-size: 60% auto; }
+}
+
+
+
+/**
+Forms
+ */
+.input-radio{
+	opacity: 0;
+	position: absolute;
+	cursor: pointer;
+	z-index: 30;
+}
+
+.input-radio + span{
+	@apply bg-white border-2 border-primary w-3.5 h-3.5 block top-0.5 relative;
+}
+
+.input-radio:checked + span{
+	@apply bg-primary;
+}
+
+
+
+/**
+LOADER
+ */
+.loader{
+	z-index: 150;
+}
+
+.loader--spinner{
+	border-top-color: #00AAA7;
+	-webkit-animation: spinner 1.5s linear infinite;
+	animation: spinner 1.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spinner {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
